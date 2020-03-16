@@ -35,7 +35,7 @@ class App extends Component {
   // 我們的第一個使用後端api的get方法
   // 從我們的資料庫中獲取資料
   getDataFromDb = () => {
-    fetch('http://3.19.29.61:3000/api/getData')
+    fetch('http://3.19.29.61:3000/api/getdata')
       .then((data) => data.json())
       .then((res) => this.setState({ data: res.data }));
   };
