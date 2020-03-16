@@ -35,7 +35,7 @@ class App extends Component {
   // 我們的第一個使用後端api的get方法
   // 從我們的資料庫中獲取資料
   getDataFromDb = () => {
-    fetch('http://localhost:3001/api/getData')
+    fetch('http://3.19.29.61:3000/api/getData')
       .then((data) => data.json())
       .then((res) => this.setState({ data: res.data }));
   };
@@ -48,7 +48,7 @@ class App extends Component {
       ++idToBeAdded;
     }
 
-    axios.post('http://localhost:3001/api/putData', {
+    axios.post('http://3.19.29.61:3000/api/putData', {
       id: idToBeAdded,
       message: message,
     });
@@ -65,7 +65,7 @@ class App extends Component {
       }
     });
 
-    axios.delete('http://localhost:3001/api/deleteData', {
+    axios.delete('http://3.19.29.61:3000/api/deleteData', {
       data: {
         id: objIdToDelete,
       },
@@ -83,7 +83,7 @@ class App extends Component {
       }
     });
 
-    axios.post('http://localhost:3001/api/updateData', {
+    axios.post('http://3.19.29.61:3000/api/updateData', {
       id: objIdToUpdate,
       update: { message: updateToApply },
     });
